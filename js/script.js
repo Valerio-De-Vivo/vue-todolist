@@ -22,6 +22,8 @@ var app = new Vue({
     methods: {
         aggiungi(){
             this.todos.push(this.todo);
+            this.todos.sort();
+
             this.todo = '';
         },
 
@@ -32,7 +34,8 @@ var app = new Vue({
 
         undo(i) {
             this.todos.push(this.todosDone[i]);
-            this.todosDone.splice(i,1)
+            this.todosDone.splice(i,1);
+            this.todos.sort();
         },
 
         cestino(i) {
