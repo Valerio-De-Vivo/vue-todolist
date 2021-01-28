@@ -87,6 +87,23 @@ img {
   margin-bottom: 20px;
 }
 
+.fatte {
+  position: relative;
+}
+
+ul h6 {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  cursor: pointer;
+  background-color: #f2136f;
+  color: #fff;
+  padding: 10px;
+  border-radius: 20px;
+}
+
 span {
   float: right;
+  padding: 0 5px;
+  cursor: pointer;
 }

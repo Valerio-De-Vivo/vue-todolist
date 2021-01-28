@@ -30,8 +30,25 @@ var app = new Vue({
             this.todos.splice(i,1)
         },
 
-        cestino(i) {
+        undo(i) {
+            this.todos.push(this.todosDone[i]);
             this.todosDone.splice(i,1)
+        },
+
+        cestino(i) {
+            let r = confirm("Sei sicuro??");
+            if (r == true) {
+                this.todosDone.splice(i,1);
+            } 
+            
+        },
+
+        cancellaTutto () {
+            let r = confirm("Sei sicuro??");
+            if (r == true) {
+                this.todosDone = [];
+            } 
+            
         }
 
     }

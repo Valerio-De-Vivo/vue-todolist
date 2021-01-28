@@ -40,8 +40,19 @@
             <div class="fatte">
                 <h2>Cose fatte</h2>
                 <ul>
-                    <li v-for="(todo,index) in todosDone"> {{todo}} <span><i @click= "cestino(index)" class="fas fa-trash-alt"></i></span></li>
+                    <li v-for="(todo,index) in todosDone">
+                        {{todo}} 
+                        <span>
+                            <i @click= "cestino(index)" class="fas fa-trash-alt"></i>
+                        </span>
+
+                        <span>
+                            <i @click= "undo(index)" class="fas fa-clone"></i>
+                        </span>
+                    </li>
+                    <h6 @click= "cancellaTutto">Cancella Tutto</h6>
                 </ul>
+
             </div>
         </div>
 
