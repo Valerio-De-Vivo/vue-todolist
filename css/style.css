@@ -5,17 +5,88 @@
 }
 #container {
   background-color: darkcyan;
-  height: 100vh;
+  min-height: 100vh;
 }
 
-.input {
-  height: 40%;
+.top {
   background-color: #fff;
+  font-family: "Yusei Magic", sans-serif;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
+  font-size: 5em;
 }
 
-#text {
-  font-size: 4em;
+img {
+  height: 100%;
+}
+
+.text-area {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+.text-area input,
+.text-area button {
+  width: 60%;
+  margin-top: 30px;
+  padding: 20px 10px 20px;
+  font-size: 20px;
+  border-radius: 30px;
+  border: 0;
+  box-shadow: 1px 1px 3px grey;
+}
+
+.text-area button {
+  background-color: #f2136f;
+  color: white;
+  text-transform: uppercase;
+}
+
+.text-area button:hover {
+  color: #f2136f;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px #f2136f;
+}
+
+.text-area input:focus {
+  outline: 0;
+}
+
+.liste {
+  font-family: "Noto Sans JP", sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 30px;
+  color: #f2136f;
+}
+
+.liste div {
+  border-radius: 20px;
+  padding: 10px 20px;
+  text-align: center;
+  min-height: 300px;
+  min-width: 20%;
+  background-color: #fff;
+}
+
+.liste ul {
+  list-style: none;
+}
+
+.liste ul li {
+  padding: 10px 0;
+}
+.liste h2 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+span {
+  float: right;
 }

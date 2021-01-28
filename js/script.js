@@ -11,3 +11,28 @@ function typeWriter() {
     setTimeout(typeWriter, speed);
   }
 }
+
+var app = new Vue({
+    el: "#container",
+    data: {
+        todo: '',
+        todos: [],
+        todosDone: []
+    },
+    methods: {
+        aggiungi(){
+            this.todos.push(this.todo);
+            this.todo = '';
+        },
+
+        fatto(i) {
+            this.todosDone.push(this.todos[i]);
+            this.todos.splice(i,1)
+        },
+
+        cestino(i) {
+            this.todosDone.splice(i,1)
+        }
+
+    }
+}); 

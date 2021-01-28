@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To do list</title>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Yusei+Magic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,8 +14,35 @@
 
     <div id="container">
 
-        <div class="input">
-            <p id="text"></p>
+        <div class="top">
+
+            <div class="img">
+                <img src="css/img/1.gif" alt="">
+            </div>
+
+            <div class="text-area">
+
+                <div id="text"></div>
+                <input @keyUp.enter="aggiungi" v-model="todo" type="text" placeholder="Segnale qui :)">
+                <button  @click="aggiungi">Aggiungi</button>
+                
+            </div>
+        </div>
+
+        <div class="liste">
+            <div class="da-fare">
+                <h2>Cose da fare</h2>
+                <ul>
+                    <li v-for="(todo,index) in todos"> {{todo}} <span><i @click= "fatto(index)" class="fas fa-times-circle"></i></span> </li>
+                </ul>
+            </div>
+
+            <div class="fatte">
+                <h2>Cose fatte</h2>
+                <ul>
+                    <li v-for="(todo,index) in todosDone"> {{todo}} <span><i @click= "cestino(index)" class="fas fa-trash-alt"></i></span></li>
+                </ul>
+            </div>
         </div>
 
 
